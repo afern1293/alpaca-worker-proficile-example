@@ -1,0 +1,1 @@
+worker: pylivetrader run -f reversion.py --data-frequency minute -b paper
