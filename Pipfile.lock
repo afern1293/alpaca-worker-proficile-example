@@ -592,13 +592,6 @@
             ],
             "version": "==0.9.0"
         },
-        "ta-lib": {
-            "hashes": [
-                "sha256:555f5d9e6720ef935669c1f404a7179091ae35869c6435957709a7059b9fd1d7"
-            ],
-            "index": "pypi",
-            "version": "==0.4.16"
-        },
         "tables": {
             "hashes": [
                 "sha256:08ebb38c46a3833acb297f4d9fbb256ed28e0671cb0edef7e4ab6b29134d2f9d",
