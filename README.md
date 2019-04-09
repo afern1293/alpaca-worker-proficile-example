@@ -1,6 +1,8 @@
 # reversion-algo
 Heroku worker for reversion algorithm
 
+Credit: https://github.com/sturlese/pylivetrader/tree/mean_reversion/examples
+
 ## Setup
 First you will need to set up a heroku app and install a few buildpacks.
 Navigate to https://dashboard.heroku.com/apps/ and create a new application using the python buildpack.
