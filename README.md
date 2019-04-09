@@ -2,8 +2,20 @@
 Heroku worker for reversion algorithm
 
 ## Setup
+First you will need to set up a heroku app and install a few buildpacks.
+Navigate to https://dashboard.heroku.com/apps/ and create a new application using the python buildpack.
 
-Set your environment variables in heroku.
+Once you have the app created click on the settings tab and go to the Buildpacks area to add the two extra build packs we need.
+We will be adding a talib installer as well as heroku-buildpack-run to execute bash commands during deployment.
+
+In the buildpacks area add the links:
+- https://github.com/numrut/heroku-buildpack-python-talib
+- https://github.com/weibeld/heroku-buildpack-run
+#### The order is important
+Make sure you have python followed by ta-lib followed by heroku-buildpack-run in the buildpacks area.
+If they are out of order the algorithim may not deploy properly.
+
+Next set your environment variables in heroku.
 Navigate to https://dashboard.heroku.com/apps/
 
 From there go to settings and Reveal Config Vars.
@@ -14,6 +26,10 @@ export APCA_API_BASE_URL=bbb
 export APCA_API_KEY_ID=xxx
 export APCA_API_SECRET_KEY=yyy
 ```
+Now you can choose to deploy from the heroku tab.
+Navigate to Deploy and link your github repo.
+Choose to deploy from the master branch and click deploy.
+
 After deployment navigate over to the Resources tab.
 Here you will see a line that states 
 `worker pylivetrader run -f reversion.py --data-frequency minute -b paper` followed by a switch, dollar amount, and pen.
