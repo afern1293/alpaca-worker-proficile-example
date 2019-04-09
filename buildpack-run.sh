@@ -1,0 +1,1 @@
+cp /app/paper.py ~/.heroku/python/lib/python3.6/site-packages/pylivetrader/backend/
